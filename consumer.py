@@ -14,12 +14,12 @@ logging.basicConfig(
 app = Flask(__name__)
 
 KAFKA_CONFIG = {
-    'bootstrap.servers': 'cvq4abs3mareak309q80.any.us-west-2.mpx.prd.cloud.redpanda.com:9092',
+    'bootstrap.servers': 'd03jborb92dfgde46vd0.any.us-west-2.mpx.prd.cloud.redpanda.com:9092',
     'security.protocol': 'SASL_SSL',
     'sasl.mechanism': 'SCRAM-SHA-256',
-    'sasl.username': 'IngEnigma',
-    'sasl.password': 'BrARBOxX98VI4f2LIuIT1911NYGrXu',
-    'group.id': 'crimes-consumer-group',
+    'sasl.username': 'SoyEtoor',
+    'sasl.password': '040901',
+    'group.id': 'Postgres-consumer-group',
     'auto.offset.reset': 'earliest',
     'enable.auto.commit': False
 }
@@ -27,12 +27,12 @@ KAFKA_CONFIG = {
 DB_PARAMS = {
     'dbname': 'neondb',
     'user': 'neondb_owner',
-    'password': 'npg_bWF4oOStGl9s',
-    'host': 'ep-royal-boat-a4jfdktg-pooler.us-east-1.aws.neon.tech',
+    'password': 'npg_iexCBf3Lr0XS',
+    'host': 'ep-icy-poetry-a4el28n7-pooler.us-east-1.aws.neon.tech',
     'port': '5432'
 }
 
-TOPIC = "crimes_pg"
+TOPIC = "Postgres"
 
 def get_db_connection():
     return psycopg2.connect(**DB_PARAMS)
